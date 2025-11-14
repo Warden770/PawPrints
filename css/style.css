@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffebf6;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  max-width: 400px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+h2 a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #9810fa; /* This will change both text and logo color */
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  fill: #9810fa; /* Specific color for the paw icon */
+  transform: rotate(50deg);
+}
+
+h1 {
+  max-width: 315px;
+  font-size: 48px;
+  color: #59168b;
+  line-height: 1.2;
+  margin-top: 48px;
+}
+
+h1 span {
+  color: #ff69b4;
+  display: block;
+}
+
+.description {
+  font-size: 18px;
+  color: #364153;
+  margin: 48px 0 0 0;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0 24px 0;
+  flex-wrap: wrap;
+}
+.get-started {
+  border: none;
+  font-size: 14px;
+  background: #9810fa;
+  padding: 14px 40px 14px 40px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.get-started a {
+  text-decoration: none;
+  color: white;
+}
+
+.get-started:hover {
+  background-color: #6807b3;
+}
+
+.learn-more {
+  font-size: 14px;
+  background: white;
+  padding: 14px 40px 14px 40px;
+  border: 1.18px solid #9810fa;
+  border-radius: 8px;
+  color: #9810fa;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.learn-more:hover {
+  color: black;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+  line-height: 1.5;
+  flex-wrap: wrap;
+  margin: 48px 0 0 0;
+}
+
+.stat-number {
+  font-size: 18px;
+  color: #9810fa;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  margin: 48px 0 48px 0;
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.content-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 24px;
+  font-size: 16px;
+}
+
+.content-card h3 {
+  color: #59168b;
+}
+
+.icon-wrapper {
+  background: #f3e8ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.icon-wrapper2 {
+  background: #fce7f3;
+}
+
+.icon-wrapper3 {
+  background: #ffece3;
+}
+
+.card-vets {
+  width: 24px;
+  height: 24px;
+}
+
+.card-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.card-vets path {
+  fill: none;
+  stroke: #9810fa;
+  stroke-width: 2;
+}
+.expert-vets {
+  width: 36px;
+  height: 30px;
+  transform: rotate(60deg);
+}
+
+.expert-vets path {
+  fill: #e60076;
+  stroke: #e60076;
+  stroke-width: 10;
+}
+
+.lifetime-support path {
+  fill: none;
+  stroke: #f54900;
+  stroke-width: 2;
+}
