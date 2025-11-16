@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffebf6;
+}
+
+.side-bar {
+  width: 100%;
+  background-color: green;
+}
+
+.toggle-header {
+}
+
+.menu {
+}
+
+.logo svg {
+}
+
+.logo svg path {
+}
+
+.menu li {
+}
+
+.menu a {
+}
+
+.menu a:hover {
+}
+
+.logout {
+}
+
+.logout a {
+}
+
+.logout a:hover {
+}
+
+.logout a svg {
+}
+
+.menu a svg {
+}
+
+.logout a svg {
+}
+
+section {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+}
+.content-card {
+  display: flex;
+}
+
+.stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.stat-item {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 24px 24px 24px 70px;
+  font-size: 16px;
+  max-width: 390px;
+  max-height: 390px;
+  cursor: pointer;
+}
+.stat-item2 {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 24px 0; /* remove the 70px left offset */
+  flex: 0 0 390px; /* fixed width inside the flex row */
+  width: 390px;
+  max-width: 390px; /* fix the typo from 39000px */
+  box-sizing: border-box;
+  padding: 36px;
+}
+
+.content-card a {
+  text-decoration: none;
+}
+
+.paw-icon {
+}
+
+.icon-vet {
+}
+
+.upload {
+}
+
+.card-experts {
+}
+
+.card-description {
+}
+
+.stat-number {
+}
+
+#total-pets {
+}
+
+#pets-adopted {
+}
+
+#pets-available {
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper {
+    display: block;
+  }
+
+  .stat-item {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 24px 24px 24px 70px;
+    font-size: 16px;
+    max-width: 390px;
+    cursor: pointer;
+  }
+
+  .content-card a {
+    text-decoration: none;
+  }
+
+  .paw-icon {
+    background-color: #f3e8ff;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    padding: 12px;
+  }
+
+  .icon-vet {
+    background-color: #fce7f3;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    padding: 12px;
+  }
+
+  .upload {
+    background-color: #ffedd4;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    padding: 12px;
+  }
+
+  .card-experts {
+    color: #59168b;
+    margin: 20px 0;
+  }
+
+  .card-description {
+    color: #4a5565;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .stat-number {
+    font-size: 18px;
+    margin: 20px 0 0 0;
+  }
+
+  #total-pets {
+    color: #59168b;
+  }
+
+  #pets-adopted {
+    color: #00a63e;
+  }
+
+  #pets-available {
+    color: #155dfc;
+  }
+
+  .stats {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+
+  .stats .stat-item2 {
+    margin: 12px 0;
+    flex: none !important;
+    width: 85% !important;
+    max-width: none !important;
+    margin: 12px 52px;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  } /* safety */
+}
