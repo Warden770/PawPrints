@@ -161,7 +161,7 @@
     <nav aria-label="Primary">
       <ul>
         <li>
-          <a href="/dashboard" aria-current="page"
+          <a href="dashboard.html" aria-current="page"
             ><svg
               width="40px"
               height="40px"
@@ -199,7 +199,7 @@
           >
         </li>
         <li>
-          <a href="/about"
+          <a href="about-us.html"
             ><svg
               width="40px"
               height="40px"
@@ -232,7 +232,7 @@
           >
         </li>
         <li>
-          <a href="/profile">
+          <a href="profile.html">
             <svg
               width="40px"
               height="40px"
@@ -267,7 +267,7 @@
 
       <section class="quick-actions">
         <div class="card-list">
-          <a href="/pets" class="card">
+          <a href="available-pets.html" class="card">
             <div class="logo-container">
               <svg
                 class="logo-container1"
@@ -363,7 +363,7 @@
             <h2>Available Pets</h2>
             <p>Browse and adopt pets looking for their forever homes</p>
           </a>
-          <a href="/vets" class="card">
+          <a href="#" class="card">
             <div class="logo-container2">
               <svg
                 class="logo-container2"
@@ -384,7 +384,7 @@
             <h2>Veterinarians</h2>
             <p>Connect with certified veterinarians for pet care</p>
           </a>
-          <a href="/upload" class="card">
+          <a href="upload-pet.html" class="card">
             <div class="logo-container3">
               <svg
                 class="logo-container3"
@@ -414,18 +414,20 @@
         <div class="stats-list">
           <article>
             <h3>Total Pets</h3>
-            <p style="color: #59168b">156</p>
+            <p style="color: #59168b"><span id="total-pets">0</span></p>
           </article>
           <article>
             <h3>Adopted</h3>
-            <p style="color: #00a63e">89</p>
+            <p style="color: #00a63e"><span id="pets-adopted">0</span></p>
           </article>
           <article>
             <h3>Pets Available</h3>
-            <p style="color: #155dfc">67</p>
+            <p style="color: #155dfc"><span id="pets-available">0</span></p>
           </article>
         </div>
       </section>
     </main>
+
+    <script src="../js/script.js"></script>
   </body>
 </html>

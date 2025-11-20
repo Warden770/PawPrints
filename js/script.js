@@ -1,61 +1,47 @@
-let totalPets = 100;
-let availablePets = 20;
-let adoptedPets = 20;
+let totalPets = 0;
+let availablePets = 0;
+let adoptedPets = 0;
+
+function loadPetCounts() {
+  totalPets = parseInt(localStorage.getItem('totalPets')) || 0;
+  availablePets = parseInt(localStorage.getItem('availablePets')) || 0;
+  adoptedPets = parseInt(localStorage.getItem('adoptedPets')) || 0;
+}
+
+function savePetCounts() {
+  localStorage.setItem('totalPets', totalPets);
+  localStorage.setItem('availablePets', availablePets);
+  localStorage.setItem('adoptedPets', adoptedPets);
+}
 
 function updatePetCounts() {
-  const totalEl = document.getElementById('total-pets');
-  const availEl = document.getElementById('pets-available');
-  const adoptedEl = document.getElementById('pets-adopted');
-  if (totalEl) totalEl.innerText = totalPets;
-  if (availEl) availEl.innerText = availablePets;
-  if (adoptedEl) adoptedEl.innerText = adoptedPets;
+  document.getElementById('total-pets').innerText = totalPets;
+  document.getElementById('pets-available').innerText = availablePets;
+  document.getElementById('pets-adopted').innerText = adoptedPets;
 }
 
-function uploadPet(){
+function uploadPet() {
   totalPets += 1;
   availablePets += 1;
+  savePetCounts();
   updatePetCounts();
 }
 
-function adoptPet(){
-  availablePets -= 1;
-  adoptedPets += 1;
-  totalPets -= 1;
-  updatePetCounts();
-}
-
-/* Sidebar behaviour: only control it when viewport <= 400px */
-window.addEventListener('DOMContentLoaded', () => {
-  updatePetCounts();
-
-  const nav = document.getElementById('sidebar');
-  if (!nav) return;
-
-  const mq = window.matchMedia('(max-width: 400px)');
-
-  // initial state: mobile -> hidden, desktop -> allow CSS to control it
-  if (mq.matches) {
-    nav.style.width = '55px';
-  } else {
-    nav.style.removeProperty('width');
+function adoptPet() {
+  if (availablePets > 0) {
+    availablePets -= 1;
+    adoptedPets += 1;
+    totalPets -= 1; 
+    savePetCounts();
+    updatePetCounts();
   }
+}
 
-  // keep it consistent when crossing the breakpoint
-  mq.addEventListener('change', (e) => {
-    if (e.matches) {
-      nav.style.width = '55px';
-    } else {
-      nav.style.removeProperty('width');
-    }
-  });
+// Load counts on page load
+document.addEventListener('DOMContentLoaded', () => {
+  loadPetCounts();
+  updatePetCounts();
 });
 
-function toggleSidebar() {
-  const nav = document.getElementById('sidebar');
-  if (!nav) return;
 
-  const isMobile = window.matchMedia('(max-width: 400px)').matches;
-  if (!isMobile) return; // do nothing on desktop
 
-  nav.style.width = nav.style.width === '250px' ? '55px' : '250px';
-}
